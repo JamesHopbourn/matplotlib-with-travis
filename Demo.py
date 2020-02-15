@@ -22,4 +22,3 @@ plt.ylabel('column')
 plt.legend()
 plt.savefig("./public/Demo.png")
 plt.show()
-
