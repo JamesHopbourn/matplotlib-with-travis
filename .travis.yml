@@ -1,0 +1,21 @@
+before_install:
+# 安装 matplotlib
+- python -m pip install matplotlib --user
+
+# git 设置
+- git config --global user.name "James Hopbourn"
+- git config --global user.email "jameshopbourn@hotmail.com"
+
+# 新建 public 目录,python 程序执行后生成的图片保存到 public 目录
+script:
+- mkdir -p public
+- python Demo.py
+
+# 成功之后进入 public 目录将 public 目录内的内容上传到 develop 分支
+after_success:
+- cd ./public
+- git init
+- git add --all .
+- git commit -m "Travis CI Auto Builder 2"
+- git push --force https://${hexo}@github.com/JustinPual/travis.git
+ master 
