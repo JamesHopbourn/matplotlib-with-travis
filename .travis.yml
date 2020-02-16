@@ -8,8 +8,10 @@ before_install:
 
 # 新建 public 目录,python 程序执行后生成的图片保存到 public 目录
 script:
+- mv SimHei.ttf /usr/share/fonts
 - mkdir -p public
 - python Demo.py
+- python Chinese.py
 - mv *.png public
 
 # 成功之后进入 public 目录将 public 目录内的内容上传到 develop 分支
