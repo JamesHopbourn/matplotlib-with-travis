@@ -2,7 +2,7 @@
 
 ![](https://raw.githubusercontent.com/JamesHopbourn/matplotlib-with-travis/master/Demo.png)
 
-![](https://raw.githubusercontent.com/JamesHopbourn/matplotlib-with-travis/master/Chinese.png)
+![](https://raw.githubusercontent.com/JamesHopbourn/matplotlib-with-travis/resource/Chinese.png)
 
 ### matplotlib tample
 ```
