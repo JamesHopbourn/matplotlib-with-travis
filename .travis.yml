@@ -11,7 +11,8 @@ before_install:
 # 新建 public 目录,python 程序执行后生成的图片保存到 public 目录
 script:
 - mkdir -p public
-- wget https://raw.githubusercontent.com/StellarCN/scp_zh/master/fonts/SimHei.ttf ~/.local/share/fonts/SimHei.ttf 
+- mkdir -p ~/.local/share/fonts/SimHei.ttf 
+- wget https://raw.githubusercontent.com/StellarCN/scp_zh/master/fonts/SimHei.ttf 
 - python Demo.py
 - python Chinese.py
 - mv *.png public
