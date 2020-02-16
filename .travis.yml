@@ -1,6 +1,7 @@
 before_install:
 # 安装 matplotlib
 - python -m pip install matplotlib --user
+- sudo apt-get install python-tk
 
 # git 设置
 - git config --global user.name "James Hopbourn"
