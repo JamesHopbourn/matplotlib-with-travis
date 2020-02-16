@@ -18,4 +18,5 @@ after_success:
 - git init
 - git add --all .
 - git commit -m "Travis CI Auto Builder"
+- git push --force https://${token}@github.com/JamesHopbourn/matplotlib-with-travis.git HEAD:master 
 - git push --force https://${token}@github.com/JamesHopbourn/matplotlib-with-travis.git HEAD:resource 
