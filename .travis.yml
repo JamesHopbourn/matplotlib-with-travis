@@ -1,6 +1,6 @@
 before_install:
 # 安装 matplotlib
-- python -m pip install matplotlib --user
+- sudo pip install matplotlib==2.2.0
 - sudo apt-get install python-tk
 
 # git 设置
