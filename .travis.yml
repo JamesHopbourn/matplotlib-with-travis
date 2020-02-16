@@ -7,6 +7,7 @@ before_install:
 - sudo apt-get install ttf-wqy-zenhei
 - sudo fc-cache -f -v
 - fc-list :lang=zh
+
 # git 设置
 - git config --global user.name "James Hopbourn"
 - git config --global user.email "jameshopbourn@hotmail.com"
