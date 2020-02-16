@@ -4,7 +4,7 @@ before_install:
 - sudo apt-get install python-tk
 
 # 安装字体
-- sudo apt-get install ttf-wqy-zenhei ttf-wqy-microhe
+- sudo apt-get install ttf-wqy-zenhei
 - sudo fc-cache -f -v
 - fc-list :lang=zh
 # git 设置
