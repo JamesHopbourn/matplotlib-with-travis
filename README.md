@@ -4,7 +4,7 @@
 
 ![](https://raw.githubusercontent.com/JamesHopbourn/matplotlib-with-travis/master/Chinese.png)
 
-matplotlib tample
+### matplotlib tample
 ```
 # -*- coding: UTF-8 -*-
 import matplotlib
@@ -16,5 +16,5 @@ plt.rcParams['axes.unicode_minus']=False
 
 
 plt.show()
-plt.savefig("Chinese.png")
+plt.savefig("Filename.png")
 ```
