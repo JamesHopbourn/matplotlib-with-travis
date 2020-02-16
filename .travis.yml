@@ -3,11 +3,6 @@ before_install:
 - sudo pip install matplotlib==2.2.0
 - sudo apt-get install python-tk
 
-# 安装字体
-- sudo apt-get install ttf-wqy-zenhei
-- sudo fc-cache -f -v
-- fc-list :lang=zh
-
 # git 设置
 - git config --global user.name "James Hopbourn"
 - git config --global user.email "jameshopbourn@hotmail.com"
@@ -15,8 +10,7 @@ before_install:
 # 新建 public 目录,python 程序执行后生成的图片保存到 public 目录
 script:
 - mkdir -p public
-- mkdir -p ~/.local/share/fonts
-- mv SimHei.ttf ~/.local/share/fonts 
+- curl -o ~/.local/share/fonts/SimHei.ttf https://raw.githubusercontent.com/StellarCN/scp_zh/master/fonts/SimHei.ttf
 - python Demo.py
 - python Chinese.py
 - mv *.png public
