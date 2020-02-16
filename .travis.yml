@@ -12,7 +12,7 @@ before_install:
 script:
 - mkdir -p public
 - mkdir -p ~/.local/share/fonts/SimHei.ttf 
-- wget https://raw.githubusercontent.com/StellarCN/scp_zh/master/fonts/SimHei.ttf 
+- mv SimHei.tff ~/.local/share/fonts/
 - python Demo.py
 - python Chinese.py
 - mv *.png public
