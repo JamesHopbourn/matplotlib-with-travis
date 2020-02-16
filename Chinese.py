@@ -1,5 +1,6 @@
 # -*- coding: UTF-8 -*-
 import matplotlib.pyplot as plt 
+import matplotlib
 myfont = matplotlib.font_manager.FontProperties(fname=r"./SimHei.ttfF")  #fname指定字体文件  选简体显示中文
 
 #plt.rcParams['font.sans-serif']=['SimHei'] #用来正常显示中文标签 
