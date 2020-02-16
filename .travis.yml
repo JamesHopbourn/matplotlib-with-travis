@@ -3,6 +3,10 @@ before_install:
 - sudo pip install matplotlib==2.2.0
 - sudo apt-get install python-tk
 
+# 安装字体
+- sudo apt-get install ttf-wqy-zenhei ttf-wqy-microhe
+- sudo fc-cache -f -v
+- fc-list :lang=zh
 # git 设置
 - git config --global user.name "James Hopbourn"
 - git config --global user.email "jameshopbourn@hotmail.com"
