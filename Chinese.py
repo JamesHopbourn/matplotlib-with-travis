@@ -1,8 +1,9 @@
 # -*- coding: UTF-8 -*-
-import matplotlib.pyplot as plt 
 import matplotlib
 matplotlib.use('Agg')
 myfont = matplotlib.font_manager.FontProperties(fname=r"./SimHei.ttfF")  #fname指定字体文件  选简体显示中文
+
+import matplotlib.pyplot as plt 
 plt.rcParams['axes.unicode_minus']=False #用来正常显示负号 #有中文出现的情况，需要u'内容' 
 
 plt.clf()  # 清空画布
