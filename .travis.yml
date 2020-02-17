@@ -13,7 +13,8 @@ before_install:
 - mv SimHei.ttf ~/.local/share/fonts/
 
 script:
-- python *.py
+- python Demo.py
+- python Chinese.py
 - mv *.png public
 
 # 成功之后进入 public 目录将 public 目录内的内容上传到 develop 分支
