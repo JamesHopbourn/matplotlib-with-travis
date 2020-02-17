@@ -1,6 +1,7 @@
 before_install:
 # 安装 matplotlib
 - sudo pip install matplotlib
+- sudo pip install graphviz 
 - sudo apt-get install python-tk
 
 # git 设置
@@ -13,6 +14,7 @@ before_install:
 - mv SimHei.ttf ~/.local/share/fonts/
 
 script:
+- dot -Tpng test.dot -o test.png
 - python Demo.py
 - python Chinese.py
 - mv *.png public
