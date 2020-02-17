@@ -1,4 +1,4 @@
-digraph A {
+digraph Orthogonal {
   node [shape=box];
   "国家机关" -> "中华人民共和国国务院" -> "政府\n负责行政";
   "国家机关" -> "最高人民检察院" -> "检察院\n负责监督";
