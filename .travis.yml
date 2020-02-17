@@ -1,7 +1,7 @@
 before_install:
 # 安装 matplotlib
 - sudo pip install matplotlib
-- sudo pip install python-pydot python-pydot-ng graphviz 
+- sudo pip install graphviz 
 - sudo apt-get install python-tk
 
 # git 设置
