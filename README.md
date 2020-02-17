@@ -2,7 +2,7 @@
 
 [matplotlib with Travis-CI](https://jameshopbourn.github.io/2020/02/16/travis%20with%20matplotlib)
 
-![](https://raw.githubusercontent.com/JamesHopbourn/matplotlib-with-travis/master/Demo.png)
+![](https://raw.githubusercontent.com/JamesHopbourn/matplotlib-with-travis/resource/Demo.png)
 
 ![](https://raw.githubusercontent.com/JamesHopbourn/matplotlib-with-travis/resource/Chinese.png)
 
