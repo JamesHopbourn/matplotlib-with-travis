@@ -14,7 +14,7 @@ before_install:
 - mv SimHei.ttf ~/.local/share/fonts/
 
 script:
-- dot -Tpng test.dot -o test.png
+- dot -Tpng Gov.dot -o Gov.png
 - python Demo.py
 - python Chinese.py
 - mv *.png public
