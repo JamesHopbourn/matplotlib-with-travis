@@ -6,6 +6,7 @@
 
 ![](https://raw.githubusercontent.com/JamesHopbourn/matplotlib-with-travis/resource/Chinese.png)
 
+![](https://raw.githubusercontent.com/JamesHopbourn/matplotlib-with-travis/resource/test.png)
 ### matplotlib tample
 ```
 # -*- coding: UTF-8 -*-
