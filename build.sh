@@ -6,3 +6,9 @@ do {
     dot -Tpng $file -o $filename.png
 }
 done
+
+for file in $(find . -name "*.py"|xargs basename)
+do {
+    python $file
+}
+done

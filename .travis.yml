@@ -13,13 +13,9 @@ before_install:
 - mkdir -p ~/.local/share/fonts 
 - mv SimHei.ttf ~/.local/share/fonts/
 
-# 权限设置
-- chmod 777 build.sh
-
 script:
+- chmod 777 build.sh
 - ./build.sh
-- python Demo.py
-- python Chinese.py
 - mv *.png public
 
 # 成功之后进入 public 目录将 public 目录内的内容上传到 master resource 分支
