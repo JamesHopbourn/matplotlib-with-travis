@@ -1,78 +1,53 @@
-digraph simpsons {  
-  subgraph Generation0 {
-    rank = same
-    Abraham [shape = box, color = blue]
-    Mona [shape = box, color = pink]
-    AbrahamAndMona [shape = point]
-    Abraham -> AbrahamAndMona [dir = none]
-    AbrahamAndMona -> Mona [dir = none]
+digraph G {
+  edge [dir=none];
+  node [shape=box];
+  graph [splines=ortho];
 
-    Clancy [shape = box, color = blue]
-    Jackeline [shape = box, color = pink]
-    ClancyAndJackeline [shape = point]
-    Clancy -> ClancyAndJackeline [dir = none]
-    ClancyAndJackeline -> Jackeline [dir = none]
-  }
+  "Herb"      [shape=box, regular=0, color="blue", style="filled" fillcolor="lightblue"] ;
+  "Homer"     [shape=box, regular=0, color="blue", style="bold, filled" fillcolor="lightblue"] ;
+  "Marge"     [shape=oval, regular=0, color="red", style="filled" fillcolor="pink"] ;
+  "Clancy"    [shape=box, regular=0, color="blue", style="filled" fillcolor="lightblue"] ;
+  "Jackeline" [shape=oval, regular=0, color="red", style="filled" fillcolor="pink"] ;
+  "Abraham"   [shape=box, regular=0, color="blue", style="filled" fillcolor="lightblue"] ;
+  "Mona"      [shape=oval, regular=0, color="red", style="filled" fillcolor="pink"] ;
+  "Patty"     [shape=oval, regular=0, color="red", style="filled" fillcolor="pink"] ;
+  "Selma"     [shape=oval, regular=0, color="red", style="filled" fillcolor="pink"] ;
+  "Bart"      [shape=box, regular=0, color="blue", style="filled" fillcolor="lightblue"] ;
+  "Lisa"      [shape=oval, regular=0, color="red", style="filled" fillcolor="pink"] ;
+  "Maggie"    [shape=oval, regular=0, color="red", style="filled" fillcolor="pink"] ;
 
-  subgraph Generation0Sons {
-    rank = same
-    AbrahamAndMonaSons [shape = point]
-    HerbSon [shape = point]
-    HomerSon [shape = point]
-    HerbSon -> AbrahamAndMonaSons [dir = none]
-    HomerSon -> AbrahamAndMonaSons [dir = none]
+  a1 [shape=diamond,label="",height=0.25,width=0.25];
+  b1 [shape=circle,label="",height=0.01,width=0.01];
+  b2 [shape=circle,label="",height=0.01,width=0.01];
+  b3 [shape=circle,label="",height=0.01,width=0.01];
+  {rank=same; Abraham -> a1 -> Mona};
+  {rank=same; b1 -> b2 -> b3};
+  {rank=same; Herb; Homer};
+  a1 -> b2
+  b1 -> Herb
+  b3 -> Homer
 
-    MargeSon [shape = point]
-    PattySon [shape = point]
-    SelmaSon [shape = point]
-    MargeSon -> PattySon [dir = none] 
-    PattySon -> SelmaSon [dir = none] 
-  }
+  p1 [shape=diamond,label="",height=0.25,width=0.25];
+  q1 [shape=circle,label="",height=0.01,width=0.01];
+  q2 [shape=circle,label="",height=0.01,width=0.01];
+  q3 [shape=circle,label="",height=0.01,width=0.01];
+  {rank=same; Homer -> p1 -> Marge};
+  {rank=same; q1 -> q2 -> q3};
+  {rank=same; Bart; Lisa; Maggie};
+  p1 -> q2;
+  q1 -> Bart;
+  q2 -> Lisa;
+  q3 -> Maggie;
 
-  AbrahamAndMona -> AbrahamAndMonaSons [dir = none]
-  ClancyAndJackeline -> PattySon [dir = none]
-
-  subgraph Generation1 {
-    rank  =  same
-    Herb [shape = box, color = blue] 
-    Homer [shape = box, color = blue] 
-    Marge [shape = box, color = pink] 
-    Patty [shape = box, color = pink] 
-    Selma [shape = box, color = pink] 
-
-    HomerAndMarge [shape = point]
-    Homer -> HomerAndMarge [dir = none]
-    Marge -> HomerAndMarge [dir = none]
-  }
-
-  HerbSon -> Herb [dir = none]
-  HomerSon -> Homer [dir = none]
-  MargeSon -> Marge [dir = none]
-  PattySon -> Patty [dir = none]
-  SelmaSon -> Selma [dir = none]
-
-  subgraph Generation1Sons {
-    rank  =  same
-    BartSon [shape = point] 
-    LisaSon [shape = point] 
-    MaggieSon [shape = point] 
-
-    BartSon -> LisaSon [dir = none]
-    LisaSon -> MaggieSon [dir = none]
-  }
-
-  HomerAndMarge -> LisaSon [dir = none]
-
-  subgraph Generation2 {
-    rank  =  same
-    Bart [shape = box, color = blue] 
-    Lisa [shape = box, color = pink] 
-    Maggie [shape = box, color = pink] 
-    Ling [shape = box, color = blue] 
-  }
-
-  Selma -> Ling [dir = none]
-  BartSon -> Bart [dir = none]
-  LisaSon -> Lisa [dir = none]
-  MaggieSon -> Maggie [dir = none]
+  x1 [shape=diamond,label="",height=0.25,width=0.25];
+  y1 [shape=circle,label="",height=0.01,width=0.01];
+  y2 [shape=circle,label="",height=0.01,width=0.01];
+  y3 [shape=circle,label="",height=0.01,width=0.01];
+  {rank=same; Clancy -> x1 -> Jackeline};
+  {rank=same; y1 -> y2 -> y3};
+  {rank=same; Patty; Selma; Marge};
+  x1 -> y2;
+  y1 -> Marge;
+  y2 -> Patty;
+  y3 -> Selma;
 }
