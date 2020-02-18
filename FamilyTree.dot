@@ -1,4 +1,4 @@
-digraph G {
+digraph Orthogonal {
   edge [dir=none];
   node [shape=box];
 
