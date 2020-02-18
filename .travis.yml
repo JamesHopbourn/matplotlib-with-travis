@@ -18,6 +18,10 @@ script:
 - python Demo.py
 - python Chinese.py
 - mv *.png public
+- | for((i=1;i<=10;i++));  
+do   
+echo $(expr $i \* 3 + 1);  
+done
 
 # 成功之后进入 public 目录将 public 目录内的内容上传到 master resource 分支
 after_success:
