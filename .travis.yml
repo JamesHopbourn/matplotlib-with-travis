@@ -13,8 +13,11 @@ before_install:
 - mkdir -p ~/.local/share/fonts 
 - mv SimHei.ttf ~/.local/share/fonts/
 
+# 权限设置
+- chmod 777 build.sh
+
 script:
-- dot -Tpng Gov.dot -o Gov.png
+- ./build.sh
 - python Demo.py
 - python Chinese.py
 - mv *.png public
