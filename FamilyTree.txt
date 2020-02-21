@@ -1,0 +1,32 @@
+digraph G {
+    nodesep=0.6;
+    edge [arrowsize=0.3];
+
+
+    { rank = same;
+        "g1"; "King"; "ph1"; "Queen";
+    };
+
+    { rank = same; 
+        "g2"; "ph2"; "ph2L"; "ph2R"; "ph2LL"; "ph2RR"
+    };
+
+    { rank = same;
+        "g3"; "ps1"; "ps2"; "pr1"; "pr2"
+    };
+
+    "King" -> "ph1" [arrowsize=0.0];
+    "ph1" -> "Queen" [arrowsize=0.0];
+
+    "ph1" -> "ph2" [arrowsize=0.0];
+    "ph2LL" -> "ph2L" [arrowsize=0.0];
+    "ph2L" -> "ph2" [arrowsize=0.0];
+    "ph2" -> "ph2R" [arrowsize=0.0];
+    "ph2R" -> "ph2RR" [arrowsize=0.0];
+
+    "ph2LL" -> "ps1" [arrowsize=0.0];
+    "ph2L"-> "pr1" [arrowsize=0.0];
+    "ph2R" -> "ps2" [arrowsize=0.0];
+    "ph2RR" -> "pr2" [arrowsize=0.0];
+
+}
