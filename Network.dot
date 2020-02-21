@@ -1,0 +1,9 @@
+digraph Orthogonal {
+    node [shape=box];
+     graph [label="网络拓扑图", splines=ortho, nodesep=2]
+    "谷歌云香港节点\nTrojan 协议\nBBR Plus加速" -> "联通百兆光纤入户" -> "百兆光猫";
+    "百兆光猫" -> "千兆软路由" [label = "桥接"];
+    "千兆软路由" -> "客厅硬路由";
+    "客厅硬路由" -> "iPhone";
+    "千兆软路由" -> "客卧 AP" -> "MacBook Air";
+}
